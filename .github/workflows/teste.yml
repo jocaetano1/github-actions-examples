@@ -18,5 +18,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-node@v1
-      - run: node main.js
+      - run: ls
+      - run: cd .. & ls 
   
