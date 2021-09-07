@@ -1,0 +1,16 @@
+name: aprendendo-github-actions
+
+on: [push]
+
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - run: npm install -g bats
+      - run: bats -v
+  meu-job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sudo echo "Esse é o meu job 😀"
